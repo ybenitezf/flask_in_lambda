@@ -13,14 +13,15 @@ Globals:
 Resources:
   HelloWorldFunction:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
-    Environment:
-      Variables:
-        ENV: 'development'
-        DEBUG: 'True'
     Properties:
       CodeUri: application/
       Handler: app.lambda_handler
       Runtime: python3.8
+      Environment:
+        Variables:
+          ENV: 'development'
+          DEBUG: 'True'
+          FLASK_STATIC_DIGEST_HOST_URL: ''
       Events:
         HelloWorld:
           Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api

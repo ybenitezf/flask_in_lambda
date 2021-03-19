@@ -1,0 +1,6 @@
+{
+    "HelloWorldFunction": {
+        "DEBUG": "True",
+        "ENV": "development"
+    }
+}
